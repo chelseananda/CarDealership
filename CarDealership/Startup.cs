@@ -16,7 +16,6 @@ namespace CarDealership
 {
         public class Startup
         {
-
             public Startup(IConfiguration configuration)
             {
                 Configuration = configuration;
@@ -34,15 +33,15 @@ namespace CarDealership
                 //this will help us to use identtity functionality and handle our database
                 services.AddIdentity<IdentityUser, IdentityRole>().AddEntityFrameworkStores<AppDBContext>();
 
-
                 //this part of the code is dealing with client request
                 services.ConfigureApplicationCookie(options =>
                 {
                     options.LoginPath = "/Account/Login";
                 });
                 //to specify iservices collection which means it will not register the services used for the page
-                services.AddControllersWithViews();
-            }
+                services.AddControllersWithViews().AddNewtonsoftJson();
+                services.AddSingleton<IRepository, MemoRepository>();
+        }
 
             // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
             public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
@@ -76,5 +75,7 @@ namespace CarDealership
             {
                 return app;
             }
+
+
         }
     }

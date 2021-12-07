@@ -1,0 +1,73 @@
+﻿@model IEnumerable<Memo>
+@{
+    Layout = "_Layout";
+}
+
+<form id="addform" asp-action="AddMemo" method="post">
+    <div class="form-group">
+        <label for="InvoiceID">ID: </label>
+        <input class="form-control" name="InvoiceID" />
+    </div>
+
+    <div class="form-group">
+        <label for="CustomerName">Customer Name: </label>
+        <input class="form-control" name="CustomerName" />
+    </div>
+
+    <div class="form-group">
+        <label for="CarSerial">Car Serial: </label>
+        <input class="form-control" name="CarSerial" />
+    </div>
+
+    <div class="form-group">
+        <label for="PurchaseDate">Purchase Date: </label>
+        <input class="form-control" name="PurchaseDate" />
+    </div>
+
+    <div class="form-group">
+        <label for="NetPrice">Net Price: </label>
+        <input class="form-control" name="NetPrice" />
+    </div>
+
+    <div class="form-group">
+        <label for="OtherFees">Other Fees: </label>
+        <input class="form-control" name="OtherFees" />
+    </div>
+
+    <div class="form-group">
+        <label for="EmployeeID">Employee ID: </label>
+        <input class="form-control" name="EmployeeID" />
+    </div>
+
+    <div class="text-center panel-body">
+        <button type="submit" class="btn btn-primary">Add</button>
+    </div>
+</form>
+
+<table class="table table-bordered table-striped m-2">
+    <thead>
+        <tr>
+            <th>Invoice ID</th>
+            <th>Customer Name</th>
+            <th>Car Serial</th>
+            <th>Purchase Date</th>
+            <th>Net Price</th>
+            <th>Other Fees</th>
+            <th>Employee ID</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>@item.InvoiceID</td>
+                <td>@item.CustomerName</td>
+                <td>@item.CarSerial</td>
+                <td>@item.PurchaseDate</td>
+                <td>@item.NetPrice</td>
+                <td>@item.OtherFees</td>
+                <td>@item.EmployeeID</td>
+            </tr>
+        }
+    </tbody>
+</table>
