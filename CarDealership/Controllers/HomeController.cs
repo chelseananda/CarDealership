@@ -45,7 +45,5 @@ namespace CarDealership.Controllers
             memoRepository.AddMemo(memo);
             return RedirectToAction("Index");
         }
-
-        
     }
 }
