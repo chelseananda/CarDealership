@@ -23,5 +23,6 @@ namespace CarDealership.Models
             base.OnModelCreating(modelBuilder);
 
         }
+        public DbSet<Dealer> Dealers { get; set; }
     }
 }

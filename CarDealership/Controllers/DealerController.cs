@@ -8,9 +8,17 @@ namespace CarDealership.Controllers
 {
     public class DealerController : Controller
     {
+        [HttpGet]
         public IActionResult Index()
         {
             return View();
         }
+
+        [HttpGet]
+        public IActionResult Dealer()
+        {
+            return View();
+        }
+
     }
 }

@@ -10,7 +10,7 @@ namespace CarDealership.Models
         //pure getter method
         IEnumerable<Memo> Memos { get; }
         //getting memos by id's
-        Memo  this[int id] { get; }
+        Memo this[int id] { get; }
 
         //adding methods
         Memo AddMemo(Memo memo);
