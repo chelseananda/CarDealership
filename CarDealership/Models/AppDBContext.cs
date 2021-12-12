@@ -24,5 +24,7 @@ namespace CarDealership.Models
 
         }
         public DbSet<Dealer> Dealers { get; set; }
+
+        public DbSet<Customer> Customers { get; set; }
     }
 }
