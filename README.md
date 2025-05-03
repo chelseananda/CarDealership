@@ -1,4 +1,5 @@
 # Car Dealership Management System
+<img width="1009" alt="Screenshot 2025-05-03 at 3 06 15 PM" src="https://github.com/user-attachments/assets/c1f76909-04e1-4ced-bbb6-e25e5e1908a4" />
 
 A robust ASP.NET Core MVC application for managing car dealerships, inventory, and customer relationships.
 
